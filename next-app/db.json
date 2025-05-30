@@ -1,0 +1,53 @@
+{
+  "topics": [
+    {
+      "id": "1",
+      "title": "html",
+      "body": "html is ..."
+    },
+    {
+      "id": "2",
+      "title": "css",
+      "body": "css is ..."
+    },
+    {
+      "id": "3",
+      "title": "javascript",
+      "body": "javascript is ..."
+    },
+    {
+      "id": "31dd",
+      "title": "hello",
+      "body": "hello"
+    },
+    {
+      "id": "1001",
+      "title": "happy",
+      "body": "happy"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "Hello World",
+      "body": "Hello World"
+    },
+    {
+      "id": "2",
+      "title": "Hello World2",
+      "body": "Hello World2"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "postId": 1,
+      "content": "Hi"
+    },
+    {
+      "id": "2",
+      "postId": 1,
+      "content": "Bye"
+    }
+  ]
+}
