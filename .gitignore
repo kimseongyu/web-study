@@ -128,3 +128,27 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Rust build output
+**/target/
+
+# wasm-pack build output
+**/pkg/
+
+# Node.js dependencies
+**/node_modules/
+
+# Vite/webpack build output
+**/dist/
+
+# Local env files
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# Editor/IDE
+*.swp
+.vscode/
+.idea/
