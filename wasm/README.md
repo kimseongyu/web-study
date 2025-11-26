@@ -47,3 +47,6 @@ npm run dev
 
 - https://developer.mozilla.org/ko/docs/WebAssembly/Guides/Concepts
 - https://wasmbyexample.dev/examples/hello-world/hello-world.c.en-us.html
+
+- https://rustwasm.github.io/docs/book/what-is-webassembly.html
+- https://wasm-bindgen.github.io/wasm-bindgen/
