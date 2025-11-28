@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Hello wasm-pack!</title>
+    <title>WASM vs JavaScript Game of Life</title>
     <style>
       body {
         position: absolute;
@@ -14,17 +14,87 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
       }
-      #fps {
+      .controls {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .comparison-container {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+      }
+      .game-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .game-section h2 {
+        margin-bottom: 10px;
+        font-family: monospace;
+      }
+      .fps {
         white-space: pre;
         font-family: monospace;
+        font-size: 12px;
+        margin-bottom: 10px;
+        background: #f5f5f5;
+        padding: 10px;
+        border-radius: 4px;
+      }
+      .comparison-info {
+        margin-top: 20px;
+        padding: 15px;
+        background: #e8f4f8;
+        border-radius: 4px;
+        font-family: monospace;
+        font-size: 14px;
+      }
+      .controls {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        align-items: center;
+      }
+      canvas {
+        border: 1px solid #ccc;
       }
     </style>
   </head>
   <body>
-    <button id="play-pause"></button>
-    <div id="fps"></div>
-    <canvas id="game-of-life-canvas"></canvas>
+    <div class="controls">
+      <button id="play-pause">▶</button>
+      <button id="benchmark-btn">Run Benchmark</button>
+      <div>
+        <label>
+          Ticks per frame:
+          <input
+            type="number"
+            id="ticks-per-frame"
+            value="5000"
+            min="1"
+            style="width: 80px"
+          />
+        </label>
+      </div>
+    </div>
+    <div class="comparison-container">
+      <div class="game-section">
+        <h2>WASM Implementation</h2>
+        <div id="fps-wasm" class="fps"></div>
+        <canvas id="game-of-life-canvas-wasm"></canvas>
+      </div>
+      <div class="game-section">
+        <h2>JavaScript Implementation</h2>
+        <div id="fps-js" class="fps"></div>
+        <canvas id="game-of-life-canvas-js"></canvas>
+      </div>
+    </div>
+    <div id="comparison-info" class="comparison-info"></div>
     <script type="module" src="./bootstrap.js"></script>
   </body>
 </html>
