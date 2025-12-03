@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 
 const scene = new THREE.Scene();
 // Perspective camera
